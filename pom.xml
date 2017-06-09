@@ -323,15 +323,39 @@
       <artifactId>httpclient</artifactId>
       <version>4.5.3</version>
     </dependency>
-
-    <!-- axis-ant -->
     <dependency>
-      <groupId>axis-ant</groupId>
-      <artifactId>axis-ant</artifactId>
-      <version>1.0</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/axis-ant.jar</systemPath>
+      <groupId>io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>4.1.11.Final</version>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- axis-ant -->
+    <!--<dependency>-->
+      <!--<groupId>axis-ant</groupId>-->
+      <!--<artifactId>axis-ant</artifactId>-->
+      <!--<version>1.0</version>-->
+      <!--<scope>system</scope>-->
+      <!--<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/axis-ant.jar</systemPath>-->
+    <!--</dependency>-->
+    <!-- https://mvnrepository.com/artifact/axis/axis-ant -->
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis-ant</artifactId>
+      <version>1.4</version>
+    </dependency>
+
     <!-- fcexporter -->
     <dependency>
       <groupId>fcexporter</groupId>
